@@ -1,0 +1,41 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="tenants">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="tenant" type="entityType" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="entityType">
+        <xs:sequence>
+            <xs:element name="id" type="xs:string" />
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="contact" type="phoneType" />
+            <xs:element name="email" type="emailType" />
+            <xs:element name="rent" type="xs:decimal" />
+            <xs:element name="securityDep" type="xs:decimal" />
+            <xs:element name="type" type="tenantType" />
+            <xs:element name="leaseTerm" type="xs:decimal" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="emailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="phoneType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\+?\d[\d -]{8,12}\d"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tenantType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="residential"></xs:enumeration>
+            <xs:enumeration value="commercial"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

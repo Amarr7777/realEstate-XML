@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tenants xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="realEstate.xsd">
+    <tenant>
+        <id>TA006</id>
+        <name>Shanthanu</name>
+        <contact>9458123531</contact>
+        <email>gvdahnhuagfyg@gmail.com</email>
+        <rent>25000</rent>
+        <securityDep>45000</securityDep>
+        <type>commercial</type>
+        <leaseTerm>5</leaseTerm>
+    </tenant>
+    <tenant>
+        <id>TA001</id>
+        <name>shyam</name>
+        <contact>9498123521</contact>
+        <email>gvdahnhuagfyg@gmail.com</email>
+        <rent>20000</rent>
+        <securityDep>25000</securityDep>
+        <type>commercial</type>
+        <leaseTerm>5</leaseTerm>
+    </tenant>
+    <tenant>
+        <id>TA008</id>
+        <name>sharon</name>
+        <contact>9454123521</contact>
+        <email>gvdahnhuagfyg@yahoo.com</email>
+        <rent>20000</rent>
+        <securityDep>40000</securityDep>
+        <type>residential</type>
+        <leaseTerm>5</leaseTerm>
+    </tenant>
+</tenants>
